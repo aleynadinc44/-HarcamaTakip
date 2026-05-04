@@ -1,27 +1,87 @@
-#container {
+ .app-bg {
+  --background: #f8f9fa;
+}
+
+.summary-card {
+  background: linear-gradient(135deg, var(--ion-color-primary) 0%, #dc35a1 100%);
+  color: white;
+  margin: 15px;
+  padding: 25px 20px;
+  border-radius: 16px;
   text-align: center;
+  box-shadow: 0 6px 15px rgba(140, 16, 62, 0.568);
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  h3 { margin: 0; font-size: 15px; font-weight: normal; opacity: 0.85; }
+  h2 { margin: 8px 0 0; font-size: 38px; font-weight: 800; letter-spacing: -1px;}
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.input-card {
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(232, 17, 125, 0.06);
+  margin-bottom: 25px;
+  --background: #ffffff; 
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
 
-  color: #8c8c8c;
-
-  margin: 0;
+.custom-input {
+  margin-bottom: 15px;
+  --border-radius: 8px;
+  --background: #fafafa;
+  --color: #111111; 
+  --placeholder-color: #e4177e; 
+  --placeholder-opacity: 1;
+  color: #89114f; 
 }
 
-#container a {
-  text-decoration: none;
+.save-btn {
+  margin-top: 5px;
+  --border-radius: 8px;
+  height: 45px;
+}
+
+.list-heading {
+  padding-left: 20px;
+  color: #d2116e;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.list-bg {
+  background: transparent;
+  padding: 0 10px;
+}
+
+.list-item {
+  --border-radius: 12px;
+  margin-bottom: 8px;
+  --background: #ffffff;
+}
+
+ion-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  width: 45px;
+  height: 45px;
+
+  ion-icon {
+    font-size: 24px;
+    color: white;
+  }
+
+  &.tur-yemek { background: var(--ion-color-warning); }
+  &.tur-yol { background: var(--ion-color-secondary); }
+  &.tur-fatura { background: var(--ion-color-danger); }
+  &.tur-eglence { background: var(--ion-color-tertiary); }
+}
+
+.empty-box {
+  text-align: center;
+  padding: 50px 20px;
+  color: #a0a0a0;
+  
+  ion-icon { font-size: 65px; opacity: 0.6; margin-bottom: 10px; }
+  p { font-size: 15px; margin: 0; }
 }
