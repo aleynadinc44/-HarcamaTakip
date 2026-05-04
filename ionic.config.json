@@ -1,0 +1,7 @@
+{
+  "name": "HarcamaTakip",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
