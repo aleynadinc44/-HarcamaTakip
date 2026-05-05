@@ -9,14 +9,12 @@ import {
   IonAvatar, IonNote
 } from '@ionic/angular/standalone';
 
-// Arkadaşın için tamamen farklı ikonlar seçtik (İçi dolu ikonlar)
 import { addIcons } from 'ionicons';
 import { 
   pieChart, addCircle, trash, folderOpenOutline, 
   fastFood, bus, receipt, gameController 
 } from 'ionicons/icons';
 
-// Interface ismini ve içini değiştirdik
 interface GiderKaydi {
   baslik: string;
   miktar: number;
@@ -36,7 +34,6 @@ interface GiderKaydi {
   ],
 })
 export class HomePage implements OnInit {
-  // Senin kodundaki isimlerin hepsi değişti
   islemAdi: string = '';
   islemMiktari: number | null = null;
   islemTuru: string = '';
@@ -69,7 +66,6 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit(): void {
-    // LocalStorage anahtarı bile farklı (harcamalar yerine giderler)
     const kayitliVeri = localStorage.getItem('giderler');
     if(kayitliVeri){
       this.giderListesi = JSON.parse(kayitliVeri);
@@ -138,7 +134,6 @@ export class HomePage implements OnInit {
     this.toastAcik = true;
   }
 
-  // Arkadaşın için CSS class isimleri döndürüyoruz
   renkBelirle(tur: string): string {
     if(tur === 'Yemek') return 'tur-yemek';
     if(tur === 'Yol') return 'tur-yol';
