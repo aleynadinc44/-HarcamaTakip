@@ -9,13 +9,13 @@
 
 <ion-content class="app-bg">
   
-  <!-- Bakiye Kartı (Senin düz div'den farklı olarak mavi degrade kart) -->
+  
   <div class="summary-card">
     <h3>Toplam Çıkan</h3>
     <h2>{{ toplamGider }} TL</h2>
   </div>
 
-  <!-- Form Kartı -->
+ 
   <ion-card class="input-card">
     <ion-card-header>
       <ion-card-title style="font-size: 16px;">Gider Kaydet</ion-card-title>
@@ -49,21 +49,19 @@
     </ion-card-content>
   </ion-card>
 
-  <!-- Liste Başlığı -->
+ 
   <h4 class="list-heading">Kayıtlı Giderler</h4>
 
-  <!-- Boş Durum (Seninkinden tamamen farklı bir ikon ve tasarım) -->
+
   <div class="empty-box" *ngIf="giderListesi.length === 0">
     <ion-icon name="folder-open-outline"></ion-icon>
     <p>Liste şu an boş, veri bekleniyor.</p>
   </div>
 
-  <!-- Liste (Avatar destekli, çizgili yapı) -->
   <ion-list *ngIf="giderListesi.length > 0" class="list-bg">
     <ion-item-sliding *ngFor="let gider of giderListesi; let i = index">
       <ion-item lines="full" class="list-item">
         
-        <!-- Yuvarlak renkli arka planı olan ikonlar -->
         <ion-avatar slot="start" [class]="renkBelirle(gider.tur)">
           <ion-icon [name]="ikonBelirle(gider.tur)"></ion-icon>
         </ion-avatar>
@@ -73,7 +71,6 @@
           <p>{{ gider.tur }}</p>
         </ion-label>
         
-        <!-- Fiyatı gösteren Note kısmı -->
         <ion-note slot="end" color="danger" style="font-weight: bold; font-size: 16px;">
           -{{ gider.miktar }} ₺
         </ion-note>
